@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aydın Parlamento Atlası</title>
+<meta name="description" content="1950–2026 TBMM genel kurul konuşmalarında Aydın'ın yöresel sorunları: metin madenciliği ile konu, tema ve alıntı atlası.">
+<style>
+:root{--color-fg:#1f2328;--color-fg-muted:#5d6670;--color-bg:#faf9f6;--color-panel:#ffffff;--color-border-line:#e3e0d8;--color-bad:#c0392b;
+--cds-radius:10px;--cds-gap-xs:6px;--cds-gap-sm:12px;--cds-gap-md:20px;--cds-gap-lg:32px;--cds-font-size-caption:.82rem;--cds-font-weight-medium:600;
+--cds-chart-grid:#e8e5de;--cds-chart-axis:#9aa0a6;--cds-chart-reference:#7b8088;--cds-chart-muted:#b8b4aa;
+--cds-surface-popover:#fff;--cds-border:#d6d2c8;--cds-shadow-popover:0 4px 14px rgba(0,0,0,.12);--cds-text-secondary:#5d6670;--cds-ease-out:cubic-bezier(.2,.7,.2,1);--cds-hover:rgba(0,0,0,.04);
+--font-anthropic-sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--font-anthropic-serif:Georgia,"Iowan Old Style","Times New Roman",serif}
+@media (prefers-color-scheme:dark){:root{--color-fg:#ece9e2;--color-fg-muted:#a6a39b;--color-bg:#171717;--color-panel:#202020;--color-border-line:#34332f;--color-bad:#ff7b6b;
+--cds-chart-grid:#2d2c29;--cds-chart-axis:#6e6b64;--cds-chart-reference:#8a867d;--cds-chart-muted:#5a574f;--cds-surface-popover:#2a2a28;--cds-border:#44423d;--cds-shadow-popover:0 4px 14px rgba(0,0,0,.5);--cds-text-secondary:#a6a39b;--cds-hover:rgba(255,255,255,.05)}}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--color-bg);color:var(--color-fg);font-family:var(--font-anthropic-sans)}
+#dash-root{padding:0 clamp(12px,3vw,32px)}
+.dash-skeleton{background:var(--color-border-line);border-radius:8px;opacity:.5}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+</head>
+<body>
+<div id="dash-root">
+<style>
+#dash-root{--dash-gutter:clamp(12px,3vw,32px)}
+.ap{--accent:var(--cds-chart-accent,#0b6e99);max-width:1120px;margin-inline:auto;font-family:var(--font-anthropic-sans);color:var(--color-fg);line-height:1.5}
+.ap *{box-sizing:border-box}
+.ap .hero{padding:clamp(20px,4vw,40px) 0 var(--cds-gap-md)}
+.ap .eyebrow{font-size:var(--cds-font-size-caption);letter-spacing:.08em;text-transform:uppercase;color:var(--color-fg-muted);margin:0 0 8px}
+.ap h1{font-family:var(--font-anthropic-serif);font-weight:400;font-size:clamp(2rem,5vw,3.1rem);line-height:1.1;margin:0 0 12px;letter-spacing:-.01em}
+.ap .lead{color:var(--color-fg-muted);margin:0;max-width:62ch;font-size:1.06rem}
+.ap .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:var(--cds-gap-sm);margin-top:var(--cds-gap-md)}
+.ap .stat{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:14px 16px;border-top:3px solid var(--sc,var(--accent))}
+.ap .stat .k{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.ap .stat b{display:block;font-family:var(--font-anthropic-serif);font-weight:400;font-size:2.1rem;line-height:1.15;font-variant-numeric:tabular-nums}
+.ap .stat .u{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.ap nav.top{position:sticky;top:0;z-index:5;display:flex;gap:4px 14px;flex-wrap:wrap;padding:8px 0;margin-bottom:var(--cds-gap-md);background:var(--color-bg);border-bottom:1px solid var(--color-border-line);font-size:var(--cds-font-size-caption)}
+.ap nav.top a{color:var(--color-fg-muted);text-decoration:none;padding:2px 2px;border-bottom:2px solid transparent}
+.ap nav.top a:hover{color:var(--color-fg);border-bottom-color:var(--accent)}
+.ap h2{font-family:var(--font-anthropic-serif);font-weight:400;font-size:1.45rem;margin:0 0 2px}
+.ap .note{color:var(--color-fg-muted);font-size:var(--cds-font-size-caption);margin:0 0 var(--cds-gap-sm);max-width:80ch}
+.ap .card{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:calc(var(--cds-radius) + 2px);padding:clamp(14px,2.5vw,24px);margin-bottom:var(--cds-gap-md);scroll-margin-top:56px}
+.ap .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,24rem),1fr));gap:var(--cds-gap-md);margin-bottom:var(--cds-gap-md)}
+.ap .grid .card{margin-bottom:0}
+.ap .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:var(--cds-gap-sm);align-items:center}
+.ap .chip{border:1px solid var(--color-border-line);background:transparent;color:var(--color-fg);border-radius:999px;padding:4px 13px;font:inherit;font-size:var(--cds-font-size-caption);cursor:pointer;transition:background .15s,border-color .15s}
+.ap .chip:hover{border-color:var(--color-fg-muted)}
+.ap .chip[aria-pressed=true]{background:var(--color-fg);color:var(--color-bg);border-color:var(--color-fg)}
+.ap .chip:focus-visible,.ap select:focus-visible,.ap input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.ap .box{position:relative;min-height:290px}
+.ap .tip{position:absolute;pointer-events:none;background:var(--cds-surface-popover);border:1px solid var(--cds-border);border-radius:var(--cds-radius);box-shadow:var(--cds-shadow-popover);padding:6px 10px;font-size:var(--cds-font-size-caption);display:none;white-space:nowrap;z-index:2}
+.ap .tip .h{color:var(--cds-text-secondary);margin-bottom:2px}
+.ap .bad{display:flex;align-items:center;justify-content:center;gap:6px;min-height:200px;color:var(--color-fg-muted);font-size:var(--cds-font-size-caption)}
+.ap .bad i{width:.375rem;height:.375rem;border-radius:50%;background:var(--color-bad)}
+.ap table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:var(--cds-font-size-caption)}
+.ap th,.ap td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--color-border-line)}
+.ap th{color:var(--color-fg-muted);font-weight:var(--cds-font-weight-medium)}
+.ap td.n,.ap th.n{text-align:right}
+.ap tbody tr:hover td{background:var(--cds-hover,rgba(127,127,127,.08))}
+.ap .qgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,22rem),1fr));gap:var(--cds-gap-sm)}
+.ap .quote{margin:0;border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:14px 16px 12px;position:relative;background:var(--color-bg);display:flex;flex-direction:column;justify-content:space-between;gap:10px}
+.ap .quote::before{content:"“";position:absolute;top:-6px;left:10px;font-family:var(--font-anthropic-serif);font-size:3rem;line-height:1;color:var(--qc,var(--accent));opacity:.55}
+.ap .quote p{margin:10px 0 0;font-family:var(--font-anthropic-serif);font-size:1rem}
+.ap .quote .who{color:var(--color-fg-muted);font-size:var(--cds-font-size-caption);display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center}
+.ap .pill{border-radius:999px;padding:1px 9px;font-size:.72rem;color:var(--color-fg);background:color-mix(in srgb,var(--qc,var(--accent)) 22%,transparent);border:1px solid var(--qc,var(--accent))}
+.ap .ctx{display:block;color:var(--color-fg-muted);font-size:.78rem;font-style:italic}
+.ap input[type=search]{font:inherit;padding:6px 12px;border:1px solid var(--color-border-line);border-radius:999px;background:var(--color-bg);color:var(--color-fg);width:min(100%,20rem);margin-bottom:var(--cds-gap-sm)}
+.ap select{font:inherit;padding:4px 10px;border:1px solid var(--color-border-line);border-radius:var(--cds-radius);background:var(--color-bg);color:var(--color-fg)}
+.ap .wr{display:grid;grid-template-columns:7.5rem 1fr 2.6rem;gap:8px;align-items:center;font-size:var(--cds-font-size-caption);margin-bottom:5px}
+.ap .wr .bar{height:12px;border-radius:4px;background:var(--accent);opacity:.8}
+.ap .wr span:last-child{text-align:right;font-variant-numeric:tabular-nums;color:var(--color-fg-muted)}
+.ap .cmp{display:grid;grid-template-columns:8.5rem 1fr;gap:8px 10px;align-items:center;font-size:var(--cds-font-size-caption)}
+.ap .cmp .b{height:10px;border-radius:4px;margin:1px 0;min-width:2px}
+.ap .cmp .v{color:var(--color-fg-muted);margin-left:8px;font-variant-numeric:tabular-nums}
+.ap .sc{max-height:380px;overflow:auto}
+.ap .sc th{position:sticky;top:0;background:var(--color-panel);cursor:pointer}
+.ap .lim li{margin-bottom:4px}
+.ap footer{color:var(--color-fg-muted);font-size:var(--cds-font-size-caption);padding:var(--cds-gap-md) 0 var(--cds-gap-lg,32px)}
+@media (prefers-reduced-motion:no-preference){.ap .stat{animation:apin .5s var(--cds-ease-out,ease-out) both}@keyframes apin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}}
+</style>
+<div class="ap">
+<header class="hero">
+<p class="eyebrow">TÜBİTAK 2204-A · Tarih · Metin madenciliği</p>
+<h1 id="baslik">Aydın Parlamento Atlası</h1>
+<p class="lead">1950–2026 arasında TBMM genel kurul konuşmalarında Aydın'ın yöresel sorunları nasıl konuşuldu? Konu, tema ve kelime düzeyinde yıllara göre incele, tutanaktan alıntılara in.</p>
+<div class="stats" id="stats">
+<div class="stat"><span class="k">Jeotermal, 2000 sonrası</span><b data-source="hipotez" data-field="fark" data-where="id=H1">—</b><span class="u">10 bin kelimede artış</span></div>
+<div class="stat"><span class="k">Menderes kirliliği, 2000 sonrası</span><b data-source="hipotez" data-field="fark" data-where="id=H2">—</b><span class="u">10 bin kelimede artış</span></div>
+<div class="stat"><span class="k">İncir, 1990 sonrası</span><b data-source="hipotez" data-field="fark" data-where="id=H3">—</b><span class="u">10 bin kelimede artış</span></div>
+<div class="stat"><span class="k">Turizm, 1990 sonrası</span><b data-source="hipotez" data-field="fark" data-where="id=H4">—</b><span class="u">10 bin kelimede artış</span></div>
+</div>
+</header>
+
+<nav class="top" aria-label="Bölümler">
+<a href="#konu">Konular</a><a href="#anma">Anılma</a><a href="#tema">Temalar</a><a href="#karsilastir">Karşılaştır</a><a href="#ayirt">Kelimeler</a><a href="#alinti-kart">Alıntılar</a><a href="#vekiller">Vekiller</a><a href="#yontem">Yöntem</a>
+</nav>
+
+<section class="card" id="konu">
+<h2>Konu zaman çizgisi</h2>
+<p class="note">Aydın milletvekillerinin konuşmalarında, her 10 bin kelimede konunun geçme sıklığı. Bant: %95 bootstrap güven aralığı; kelime sayısı az olan on yıllarda genişler. Bir döneme tıklarsan aşağıdaki ayırt edici kelimeler o döneme geçer.</p>
+<div class="chips" id="konu-chips"></div>
+<div class="box" id="konu-chart" data-source="konu"><div class="dash-skeleton" style="height:280px"></div></div>
+</section>
+
+<section class="card" id="anma">
+<h2>Meclis'te Aydın'ın anılma sıklığı</h2>
+<p class="note">Yıllara göre, her 100 bin kelimede Aydın ve ilçeleri ile Büyük Menderes'in geçişi. Gölgeli aralık 1981–83 (Meclis kapalı); 2023 kısmi veri olduğu için yok.</p>
+<div class="box" id="anma-chart" data-source="anma"><div class="dash-skeleton" style="height:280px"></div></div>
+</section>
+
+<section class="card" id="tema">
+<h2>Temalar on yıllara göre</h2>
+<p class="note">Aydın vekillerinin konuşmalarında 10 bin kelimede tema sözlüğünden geçen ifade sayısı.</p>
+<div class="box" id="tema-chart" data-source="tema"><div class="dash-skeleton" style="height:280px"></div></div>
+</section>
+
+<section class="card" id="karsilastir">
+<h2>İki dönemi karşılaştır</h2>
+<p class="note">Seçtiğin iki dönemde her konunun 10 bin kelimedeki oranı.</p>
+<div class="chips"><select id="selA" aria-label="Birinci dönem"></select><select id="selB" aria-label="İkinci dönem"></select></div>
+<div id="cmp" data-source="konu"><div class="dash-skeleton" style="height:200px"></div></div>
+</section>
+
+<div class="grid">
+<section class="card" id="ayirt">
+<h2>Dönemin ayırt edici kelimeleri</h2>
+<p class="note">Log-odds (z) ile o dönemi diğerlerinden ayıran kelimeler.</p>
+<div class="chips" id="ayirt-chips"></div>
+<div id="ayirt-list" data-source="ayirt"><div class="dash-skeleton" style="height:240px"></div></div>
+</section>
+<section class="card" id="hipotez-kart">
+<h2>Hipotez testleri</h2>
+<p class="note">Fark: 10 bin kelimedeki oran farkı; aralık %95 bootstrap. Hipotezler veri görüldükten sonra kurulmuştur (post-hoc).</p>
+<table id="hipotez-tablo" data-source="hipotez" data-row-key="id">
+<thead><tr><th data-field="id">No</th><th data-field="hipotez">Hipotez</th><th class="n" data-field="fark">Fark</th><th class="n" data-field="alt">Alt</th><th class="n" data-field="ust">Üst</th><th data-field="sonuc">Sonuç</th></tr></thead>
+<tbody></tbody></table>
+</section>
+</div>
+
+<section class="card" id="alinti-kart">
+<h2>Tutanaktan alıntılar</h2>
+<p class="note">Tutanak metniyle birebir karşılaştırılmış alıntılar. Konuya göre süzün, arayın ya da konu grafiğinde bir döneme tıklayıp «Seçili dönemle sınırla» düğmesini açın.</p>
+<div class="chips" id="alinti-chips"></div>
+<div class="chips"><button class="chip" type="button" id="alinti-donem" aria-pressed="false"></button></div>
+<input type="search" id="alinti-ara" placeholder="Ara (vekil, yıl, kelime)" aria-label="Alıntılarda ara">
+<div id="alinti-list" class="qgrid"></div>
+</section>
+
+<section class="card" id="vekiller">
+<h2>Aydın milletvekilleri</h2>
+<p class="note">Temizlenmiş listedeki vekiller. Başlığa tıklayınca sıralanır; kelime sayısı konuşmaların toplam uzunluğudur.</p>
+<input type="search" id="vek-ara" placeholder="Vekil veya parti ara" aria-label="Vekil ara">
+<div class="sc"><table id="vek-tablo" data-source="vekil" data-row-key="ad">
+<thead><tr><th data-field="ad">Vekil</th><th class="n" data-field="konusma">Konuşma</th><th class="n" data-field="kelime">Kelime</th><th class="n" data-field="ilk_yil">İlk yıl</th><th class="n" data-field="son_yil">Son yıl</th><th data-field="partiler">Parti</th></tr></thead>
+<tbody></tbody></table></div>
+</section>
+
+<section class="card" id="yontem">
+<h2>Veri ve sınırlılıklar</h2>
+<ul class="lim">
+<li>Kaynak: 1950–Nisan 2023 arası Zenodo TBMM genel kurul derlemi (Demirtaş 2026, CC BY 4.0) ve TBMM sitesinden alınan 28. dönem tutanakları (2023–2026).</li>
+<li>Başlık, fihrist, yoklama ve soyadı Aydın olan vekil eşleşmeleri ayıklandı. Kesinlik örneklemesinin sonuçları proje raporundadır.</li>
+<li>1950'ler ve 1970'lerde kelime sayısı azdır; 1960'lar büyük ölçüde 1967 ile belirlenir. Dil devrimi nedeniyle bazı sözcük biçimleri zamanla değişir.</li>
+<li>28. dönemde toplam kelime sayısı bilinmediği için anılma oranı hesaplanmadı. Kapsam dışı: 1923–1950.</li>
+<li>Alıntılar çıkarılırken cümleler tutanak metninde birebir aranmış, vekil adı ve yılı kayıttan alınmıştır. Alıntı, vekilin kendi görüşü olmayabilir (örneğin muhalefet önergesini aktarırken); bağlam notları bunu belirtir.</li>
+<li>Sonuçlar nedensellik iddia etmez; yalnızca söylemdeki değişimi gösterir.</li>
+</ul>
+</section>
+<footer>TÜBİTAK 2204-A lise araştırma projesi · Veri: Demirtaş (2026), CC BY 4.0, TBMM tutanakları · Yöntem ve tüm sayılar proje raporunda.</footer>
+</div>
+
+
+</div>
+<script>
+window.dash=(function(){
+  const D={"anma": [{"yil": 1950, "anma": 2, "oran": 0.45}, {"yil": 1951, "anma": 0, "oran": 0.0}, {"yil": 1952, "anma": 4, "oran": 0.92}, {"yil": 1953, "anma": 7, "oran": 0.88}, {"yil": 1954, "anma": 3, "oran": 0.63}, {"yil": 1955, "anma": 2, "oran": 0.41}, {"yil": 1956, "anma": 8, "oran": 1.21}, {"yil": 1957, "anma": 3, "oran": 0.67}, {"yil": 1958, "anma": 1, "oran": 0.25}, {"yil": 1959, "anma": 0, "oran": 0.0}, {"yil": 1960, "anma": 2, "oran": 0.41}, {"yil": 1961, "anma": 1, "oran": 1.1}, {"yil": 1962, "anma": 2, "oran": 0.47}, {"yil": 1963, "anma": 5, "oran": 0.86}, {"yil": 1964, "anma": 1, "oran": 0.18}, {"yil": 1965, "anma": 1, "oran": 0.24}, {"yil": 1966, "anma": 0, "oran": 0.0}, {"yil": 1967, "anma": 8, "oran": 1.1}, {"yil": 1968, "anma": 1, "oran": 0.23}, {"yil": 1969, "anma": 2, "oran": 0.39}, {"yil": 1970, "anma": 5, "oran": 0.63}, {"yil": 1971, "anma": 5, "oran": 0.71}, {"yil": 1972, "anma": 3, "oran": 0.33}, {"yil": 1973, "anma": 2, "oran": 0.29}, {"yil": 1974, "anma": 3, "oran": 0.94}, {"yil": 1975, "anma": 5, "oran": 2.16}, {"yil": 1976, "anma": 3, "oran": 0.54}, {"yil": 1977, "anma": 2, "oran": 0.57}, {"yil": 1978, "anma": 3, "oran": 0.53}, {"yil": 1979, "anma": 6, "oran": 1.11}, {"yil": 1980, "anma": 3, "oran": 0.68}, {"yil": 1981, "anma": 0, "oran": null}, {"yil": 1982, "anma": 0, "oran": null}, {"yil": 1983, "anma": 0, "oran": null}, {"yil": 1984, "anma": 2, "oran": 0.36}, {"yil": 1985, "anma": 1, "oran": 0.17}, {"yil": 1986, "anma": 2, "oran": 0.25}, {"yil": 1987, "anma": 0, "oran": 0.0}, {"yil": 1988, "anma": 7, "oran": 0.81}, {"yil": 1989, "anma": 11, "oran": 1.54}, {"yil": 1990, "anma": 7, "oran": 0.65}, {"yil": 1991, "anma": 1, "oran": 0.15}, {"yil": 1992, "anma": 16, "oran": 0.82}, {"yil": 1993, "anma": 12, "oran": 0.87}, {"yil": 1994, "anma": 11, "oran": 0.83}, {"yil": 1995, "anma": 14, "oran": 1.29}, {"yil": 1996, "anma": 14, "oran": 1.03}, {"yil": 1997, "anma": 8, "oran": 0.59}, {"yil": 1998, "anma": 19, "oran": 1.19}, {"yil": 1999, "anma": 10, "oran": 0.47}, {"yil": 2000, "anma": 10, "oran": 0.4}, {"yil": 2001, "anma": 16, "oran": 0.64}, {"yil": 2002, "anma": 6, "oran": 0.46}, {"yil": 2003, "anma": 14, "oran": 0.7}, {"yil": 2004, "anma": 21, "oran": 1.13}, {"yil": 2005, "anma": 30, "oran": 1.46}, {"yil": 2006, "anma": 17, "oran": 0.87}, {"yil": 2007, "anma": 10, "oran": 0.51}, {"yil": 2008, "anma": 20, "oran": 0.69}, {"yil": 2009, "anma": 15, "oran": 0.84}, {"yil": 2010, "anma": 29, "oran": 1.45}, {"yil": 2011, "anma": 5, "oran": 0.52}, {"yil": 2012, "anma": 10, "oran": 0.73}, {"yil": 2013, "anma": 17, "oran": 1.08}, {"yil": 2014, "anma": 19, "oran": 0.91}, {"yil": 2015, "anma": 8, "oran": 0.65}, {"yil": 2016, "anma": 35, "oran": 1.17}, {"yil": 2017, "anma": 19, "oran": 0.83}, {"yil": 2018, "anma": 23, "oran": 1.01}, {"yil": 2019, "anma": 19, "oran": 0.78}, {"yil": 2020, "anma": 26, "oran": 0.88}, {"yil": 2021, "anma": 23, "oran": 0.88}, {"yil": 2022, "anma": 18, "oran": 0.63}], "konu": [{"konu": "İncir", "grup": "1950'ler", "oran": 0.0, "alt": 0.0, "ust": 0.0, "kelime_bin": 31}, {"konu": "İncir", "grup": "1960'ler", "oran": 2.02, "alt": 0.06, "ust": 6.09, "kelime_bin": 158}, {"konu": "İncir", "grup": "1970'ler", "oran": 4.1, "alt": 0.0, "ust": 12.2, "kelime_bin": 24}, {"konu": "İncir", "grup": "1980'ler", "oran": 0.26, "alt": 0.0, "ust": 0.9, "kelime_bin": 39}, {"konu": "İncir", "grup": "1990'ler", "oran": 0.68, "alt": 0.0, "ust": 1.65, "kelime_bin": 59}, {"konu": "İncir", "grup": "2000'ler", "oran": 4.11, "alt": 0.66, "ust": 10.09, "kelime_bin": 102}, {"konu": "İncir", "grup": "2010'ler", "oran": 9.06, "alt": 5.45, "ust": 13.57, "kelime_bin": 109}, {"konu": "İncir", "grup": "2020–26", "oran": 6.77, "alt": 4.45, "ust": 9.79, "kelime_bin": 180}, {"konu": "Pamuk", "grup": "1950'ler", "oran": 0.32, "alt": 0.0, "ust": 1.18, "kelime_bin": 31}, {"konu": "Pamuk", "grup": "1960'ler", "oran": 2.71, "alt": 0.88, "ust": 4.73, "kelime_bin": 158}, {"konu": "Pamuk", "grup": "1970'ler", "oran": 1.23, "alt": 0.0, "ust": 3.0, "kelime_bin": 24}, {"konu": "Pamuk", "grup": "1980'ler", "oran": 2.56, "alt": 0.49, "ust": 5.63, "kelime_bin": 39}, {"konu": "Pamuk", "grup": "1990'ler", "oran": 7.65, "alt": 2.05, "ust": 15.21, "kelime_bin": 59}, {"konu": "Pamuk", "grup": "2000'ler", "oran": 7.24, "alt": 3.7, "ust": 11.76, "kelime_bin": 102}, {"konu": "Pamuk", "grup": "2010'ler", "oran": 6.31, "alt": 2.83, "ust": 10.75, "kelime_bin": 109}, {"konu": "Pamuk", "grup": "2020–26", "oran": 6.11, "alt": 3.74, "ust": 9.34, "kelime_bin": 180}, {"konu": "Zeytin", "grup": "1950'ler", "oran": 1.6, "alt": 0.0, "ust": 4.23, "kelime_bin": 31}, {"konu": "Zeytin", "grup": "1960'ler", "oran": 0.32, "alt": 0.06, "ust": 0.63, "kelime_bin": 158}, {"konu": "Zeytin", "grup": "1970'ler", "oran": 1.64, "alt": 0.0, "ust": 4.36, "kelime_bin": 24}, {"konu": "Zeytin", "grup": "1980'ler", "oran": 4.35, "alt": 0.22, "ust": 12.97, "kelime_bin": 39}, {"konu": "Zeytin", "grup": "1990'ler", "oran": 1.19, "alt": 0.0, "ust": 3.02, "kelime_bin": 59}, {"konu": "Zeytin", "grup": "2000'ler", "oran": 10.96, "alt": 2.7, "ust": 21.93, "kelime_bin": 102}, {"konu": "Zeytin", "grup": "2010'ler", "oran": 6.59, "alt": 3.72, "ust": 10.19, "kelime_bin": 109}, {"konu": "Zeytin", "grup": "2020–26", "oran": 12.94, "alt": 9.11, "ust": 17.08, "kelime_bin": 180}, {"konu": "Jeotermal", "grup": "1950'ler", "oran": 0.0, "alt": 0.0, "ust": 0.0, "kelime_bin": 31}, {"konu": "Jeotermal", "grup": "1960'ler", "oran": 0.0, "alt": 0.0, "ust": 0.0, "kelime_bin": 158}, {"konu": "Jeotermal", "grup": "1970'ler", "oran": 0.0, "alt": 0.0, "ust": 0.0, "kelime_bin": 24}, {"konu": "Jeotermal", "grup": "1980'ler", "oran": 0.0, "alt": 0.0, "ust": 0.0, "kelime_bin": 39}, {"konu": "Jeotermal", "grup": "1990'ler", "oran": 0.0, "alt": 0.0, "ust": 0.0, "kelime_bin": 59}, {"konu": "Jeotermal", "grup": "2000'ler", "oran": 0.59, "alt": 0.0, "ust": 1.36, "kelime_bin": 102}, {"konu": "Jeotermal", "grup": "2010'ler", "oran": 15.64, "alt": 10.2, "ust": 21.68, "kelime_bin": 109}, {"konu": "Jeotermal", "grup": "2020–26", "oran": 9.61, "alt": 6.79, "ust": 12.78, "kelime_bin": 180}, {"konu": "Menderes kirliliği", "grup": "1950'ler", "oran": 0.0, "alt": 0.0, "ust": 0.0, "kelime_bin": 31}, {"konu": "Menderes kirliliği", "grup": "1960'ler", "oran": 0.0, "alt": 0.0, "ust": 0.0, "kelime_bin": 158}, {"konu": "Menderes kirliliği", "grup": "1970'ler", "oran": 0.0, "alt": 0.0, "ust": 0.0, "kelime_bin": 24}, {"konu": "Menderes kirliliği", "grup": "1980'ler", "oran": 0.0, "alt": 0.0, "ust": 0.0, "kelime_bin": 39}, {"konu": "Menderes kirliliği", "grup": "1990'ler", "oran": 0.34, "alt": 0.0, "ust": 1.22, "kelime_bin": 59}, {"konu": "Menderes kirliliği", "grup": "2000'ler", "oran": 0.78, "alt": 0.0, "ust": 1.95, "kelime_bin": 102}, {"konu": "Menderes kirliliği", "grup": "2010'ler", "oran": 3.29, "alt": 0.89, "ust": 6.56, "kelime_bin": 109}, {"konu": "Menderes kirliliği", "grup": "2020–26", "oran": 0.11, "alt": 0.0, "ust": 0.28, "kelime_bin": 180}, {"konu": "Deprem", "grup": "1950'ler", "oran": 0.0, "alt": 0.0, "ust": 0.0, "kelime_bin": 31}, {"konu": "Deprem", "grup": "1960'ler", "oran": 0.32, "alt": 0.0, "ust": 0.96, "kelime_bin": 158}, {"konu": "Deprem", "grup": "1970'ler", "oran": 0.82, "alt": 0.0, "ust": 2.71, "kelime_bin": 24}, {"konu": "Deprem", "grup": "1980'ler", "oran": 0.26, "alt": 0.0, "ust": 0.83, "kelime_bin": 39}, {"konu": "Deprem", "grup": "1990'ler", "oran": 0.51, "alt": 0.0, "ust": 1.05, "kelime_bin": 59}, {"konu": "Deprem", "grup": "2000'ler", "oran": 1.37, "alt": 0.3, "ust": 2.8, "kelime_bin": 102}, {"konu": "Deprem", "grup": "2010'ler", "oran": 0.55, "alt": 0.0, "ust": 1.34, "kelime_bin": 109}, {"konu": "Deprem", "grup": "2020–26", "oran": 9.33, "alt": 5.53, "ust": 13.67, "kelime_bin": 180}, {"konu": "Kuraklık", "grup": "1950'ler", "oran": 0.32, "alt": 0.0, "ust": 1.07, "kelime_bin": 31}, {"konu": "Kuraklık", "grup": "1960'ler", "oran": 0.06, "alt": 0.0, "ust": 0.2, "kelime_bin": 158}, {"konu": "Kuraklık", "grup": "1970'ler", "oran": 0.0, "alt": 0.0, "ust": 0.0, "kelime_bin": 24}, {"konu": "Kuraklık", "grup": "1980'ler", "oran": 0.51, "alt": 0.0, "ust": 1.73, "kelime_bin": 39}, {"konu": "Kuraklık", "grup": "1990'ler", "oran": 0.0, "alt": 0.0, "ust": 0.0, "kelime_bin": 59}, {"konu": "Kuraklık", "grup": "2000'ler", "oran": 1.27, "alt": 0.41, "ust": 2.29, "kelime_bin": 102}, {"konu": "Kuraklık", "grup": "2010'ler", "oran": 0.09, "alt": 0.0, "ust": 0.3, "kelime_bin": 109}, {"konu": "Kuraklık", "grup": "2020–26", "oran": 1.44, "alt": 0.77, "ust": 2.21, "kelime_bin": 180}], "tema": [{"grup": "1950'ler", "tema": "Tarım ve üretici", "oran": 21.3, "kelime_bin": 27}, {"grup": "1950'ler", "tema": "Sağlık ve salgın", "oran": 37.2, "kelime_bin": 27}, {"grup": "1950'ler", "tema": "Ulaşım ve altyapı", "oran": 6.6, "kelime_bin": 27}, {"grup": "1950'ler", "tema": "Sanayi ve emek", "oran": 32.4, "kelime_bin": 27}, {"grup": "1950'ler", "tema": "Turizm", "oran": 8.1, "kelime_bin": 27}, {"grup": "1950'ler", "tema": "Çevre, enerji, iklim", "oran": 31.6, "kelime_bin": 27}, {"grup": "1960'ler", "tema": "Tarım ve üretici", "oran": 50.5, "kelime_bin": 138}, {"grup": "1960'ler", "tema": "Sağlık ve salgın", "oran": 5.1, "kelime_bin": 138}, {"grup": "1960'ler", "tema": "Ulaşım ve altyapı", "oran": 5.0, "kelime_bin": 138}, {"grup": "1960'ler", "tema": "Sanayi ve emek", "oran": 42.5, "kelime_bin": 138}, {"grup": "1960'ler", "tema": "Turizm", "oran": 5.2, "kelime_bin": 138}, {"grup": "1960'ler", "tema": "Çevre, enerji, iklim", "oran": 25.7, "kelime_bin": 138}, {"grup": "1970'ler", "tema": "Tarım ve üretici", "oran": 46.6, "kelime_bin": 21}, {"grup": "1970'ler", "tema": "Sağlık ve salgın", "oran": 4.8, "kelime_bin": 21}, {"grup": "1970'ler", "tema": "Ulaşım ve altyapı", "oran": 14.3, "kelime_bin": 21}, {"grup": "1970'ler", "tema": "Sanayi ve emek", "oran": 18.1, "kelime_bin": 21}, {"grup": "1970'ler", "tema": "Turizm", "oran": 10.0, "kelime_bin": 21}, {"grup": "1970'ler", "tema": "Çevre, enerji, iklim", "oran": 45.6, "kelime_bin": 21}, {"grup": "1980'ler", "tema": "Tarım ve üretici", "oran": 78.1, "kelime_bin": 33}, {"grup": "1980'ler", "tema": "Sağlık ve salgın", "oran": 18.6, "kelime_bin": 33}, {"grup": "1980'ler", "tema": "Ulaşım ve altyapı", "oran": 12.3, "kelime_bin": 33}, {"grup": "1980'ler", "tema": "Sanayi ve emek", "oran": 32.1, "kelime_bin": 33}, {"grup": "1980'ler", "tema": "Turizm", "oran": 9.6, "kelime_bin": 33}, {"grup": "1980'ler", "tema": "Çevre, enerji, iklim", "oran": 11.1, "kelime_bin": 33}, {"grup": "1990'ler", "tema": "Tarım ve üretici", "oran": 45.6, "kelime_bin": 50}, {"grup": "1990'ler", "tema": "Sağlık ve salgın", "oran": 19.7, "kelime_bin": 50}, {"grup": "1990'ler", "tema": "Ulaşım ve altyapı", "oran": 24.1, "kelime_bin": 50}, {"grup": "1990'ler", "tema": "Sanayi ve emek", "oran": 21.9, "kelime_bin": 50}, {"grup": "1990'ler", "tema": "Turizm", "oran": 21.9, "kelime_bin": 50}, {"grup": "1990'ler", "tema": "Çevre, enerji, iklim", "oran": 28.7, "kelime_bin": 50}, {"grup": "2000'ler", "tema": "Tarım ve üretici", "oran": 129.1, "kelime_bin": 90}, {"grup": "2000'ler", "tema": "Sağlık ve salgın", "oran": 7.3, "kelime_bin": 90}, {"grup": "2000'ler", "tema": "Ulaşım ve altyapı", "oran": 14.3, "kelime_bin": 90}, {"grup": "2000'ler", "tema": "Sanayi ve emek", "oran": 33.3, "kelime_bin": 90}, {"grup": "2000'ler", "tema": "Turizm", "oran": 11.6, "kelime_bin": 90}, {"grup": "2000'ler", "tema": "Çevre, enerji, iklim", "oran": 25.8, "kelime_bin": 90}, {"grup": "2010'ler", "tema": "Tarım ve üretici", "oran": 72.9, "kelime_bin": 98}, {"grup": "2010'ler", "tema": "Sağlık ve salgın", "oran": 16.9, "kelime_bin": 98}, {"grup": "2010'ler", "tema": "Ulaşım ve altyapı", "oran": 17.8, "kelime_bin": 98}, {"grup": "2010'ler", "tema": "Sanayi ve emek", "oran": 27.9, "kelime_bin": 98}, {"grup": "2010'ler", "tema": "Turizm", "oran": 32.0, "kelime_bin": 98}, {"grup": "2010'ler", "tema": "Çevre, enerji, iklim", "oran": 48.5, "kelime_bin": 98}, {"grup": "2020–22", "tema": "Tarım ve üretici", "oran": 106.9, "kelime_bin": 60}, {"grup": "2020–22", "tema": "Sağlık ve salgın", "oran": 29.4, "kelime_bin": 60}, {"grup": "2020–22", "tema": "Ulaşım ve altyapı", "oran": 24.9, "kelime_bin": 60}, {"grup": "2020–22", "tema": "Sanayi ve emek", "oran": 24.8, "kelime_bin": 60}, {"grup": "2020–22", "tema": "Turizm", "oran": 52.0, "kelime_bin": 60}, {"grup": "2020–22", "tema": "Çevre, enerji, iklim", "oran": 46.7, "kelime_bin": 60}, {"grup": "2023–26", "tema": "Tarım ve üretici", "oran": 106.8, "kelime_bin": 103}, {"grup": "2023–26", "tema": "Sağlık ve salgın", "oran": 9.8, "kelime_bin": 103}, {"grup": "2023–26", "tema": "Ulaşım ve altyapı", "oran": 13.8, "kelime_bin": 103}, {"grup": "2023–26", "tema": "Sanayi ve emek", "oran": 20.6, "kelime_bin": 103}, {"grup": "2023–26", "tema": "Turizm", "oran": 21.2, "kelime_bin": 103}, {"grup": "2023–26", "tema": "Çevre, enerji, iklim", "oran": 28.3, "kelime_bin": 103}], "ayirt": [{"donem": "1950'ler", "sira": 1, "kelime": "tatbik", "adet": 88, "z": 17.3}, {"donem": "1950'ler", "sira": 2, "kelime": "belediye", "adet": 99, "z": 13.6}, {"donem": "1950'ler", "sira": 3, "kelime": "encümen", "adet": 41, "z": 11.9}, {"donem": "1950'ler", "sira": 4, "kelime": "mevzuu", "adet": 39, "z": 11.7}, {"donem": "1950'ler", "sira": 5, "kelime": "umumi", "adet": 34, "z": 11.5}, {"donem": "1950'ler", "sira": 6, "kelime": "vazife", "adet": 66, "z": 11.0}, {"donem": "1950'ler", "sira": 7, "kelime": "kabul", "adet": 105, "z": 10.8}, {"donem": "1950'ler", "sira": 8, "kelime": "mahiyetinde", "adet": 38, "z": 10.6}, {"donem": "1950'ler", "sira": 9, "kelime": "memlekette", "adet": 99, "z": 10.6}, {"donem": "1950'ler", "sira": 10, "kelime": "müracaat", "adet": 35, "z": 10.3}, {"donem": "1950'ler", "sira": 11, "kelime": "müddet", "adet": 45, "z": 10.0}, {"donem": "1950'ler", "sira": 12, "kelime": "zımgelen", "adet": 26, "z": 9.8}, {"donem": "1960'ler", "sira": 1, "kelime": "meclisi", "adet": 820, "z": 21.0}, {"donem": "1960'ler", "sira": 2, "kelime": "memlekette", "adet": 405, "z": 18.9}, {"donem": "1960'ler", "sira": 3, "kelime": "kanunu", "adet": 731, "z": 18.0}, {"donem": "1960'ler", "sira": 4, "kelime": "suretiyle", "adet": 295, "z": 16.0}, {"donem": "1960'ler", "sira": 5, "kelime": "vazife", "adet": 230, "z": 15.8}, {"donem": "1960'ler", "sira": 6, "kelime": "müzakere", "adet": 214, "z": 14.6}, {"donem": "1960'ler", "sira": 7, "kelime": "evvel", "adet": 273, "z": 14.5}, {"donem": "1960'ler", "sira": 8, "kelime": "kıbrıs", "adet": 214, "z": 14.2}, {"donem": "1960'ler", "sira": 9, "kelime": "imk", "adet": 343, "z": 14.1}, {"donem": "1960'ler", "sira": 10, "kelime": "bakımdan", "adet": 197, "z": 13.9}, {"donem": "1960'ler", "sira": 11, "kelime": "müessese", "adet": 200, "z": 13.6}, {"donem": "1960'ler", "sira": 12, "kelime": "binaenaleyh", "adet": 159, "z": 13.3}, {"donem": "1970'ler", "sira": 1, "kelime": "petrol", "adet": 62, "z": 17.4}, {"donem": "1970'ler", "sira": 2, "kelime": "transferler", "adet": 35, "z": 13.2}, {"donem": "1970'ler", "sira": 3, "kelime": "anonim", "adet": 23, "z": 10.8}, {"donem": "1970'ler", "sira": 4, "kelime": "demin", "adet": 24, "z": 10.7}, {"donem": "1970'ler", "sira": 5, "kelime": "maliye", "adet": 55, "z": 8.8}, {"donem": "1970'ler", "sira": 6, "kelime": "programı", "adet": 44, "z": 8.8}, {"donem": "1970'ler", "sira": 7, "kelime": "benimsemiş", "adet": 18, "z": 8.5}, {"donem": "1970'ler", "sira": 8, "kelime": "ortaklar", "adet": 24, "z": 8.5}, {"donem": "1970'ler", "sira": 9, "kelime": "ton", "adet": 26, "z": 8.4}, {"donem": "1970'ler", "sira": 10, "kelime": "sevgili", "adet": 17, "z": 7.9}, {"donem": "1970'ler", "sira": 11, "kelime": "arama", "adet": 17, "z": 7.8}, {"donem": "1970'ler", "sira": 12, "kelime": "planda", "adet": 12, "z": 7.8}, {"donem": "1980'ler", "sira": 1, "kelime": "vergi", "adet": 161, "z": 20.8}, {"donem": "1980'ler", "sira": 2, "kelime": "gelirleri", "adet": 62, "z": 13.4}, {"donem": "1980'ler", "sira": 3, "kelime": "vergisi", "adet": 63, "z": 12.7}, {"donem": "1980'ler", "sira": 4, "kelime": "mükellef", "adet": 44, "z": 11.5}, {"donem": "1980'ler", "sira": 5, "kelime": "kooperatifler", "adet": 64, "z": 10.8}, {"donem": "1980'ler", "sira": 6, "kelime": "tariş", "adet": 32, "z": 10.7}, {"donem": "1980'ler", "sira": 7, "kelime": "anavatan", "adet": 31, "z": 10.6}, {"donem": "1980'ler", "sira": 8, "kelime": "milli", "adet": 29, "z": 10.4}, {"donem": "1980'ler", "sira": 9, "kelime": "payı", "adet": 25, "z": 9.1}, {"donem": "1980'ler", "sira": 10, "kelime": "matrah", "adet": 22, "z": 9.0}, {"donem": "1980'ler", "sira": 11, "kelime": "hayat", "adet": 31, "z": 8.9}, {"donem": "1980'ler", "sira": 12, "kelime": "yüzde", "adet": 135, "z": 8.8}, {"donem": "1990'ler", "sira": 1, "kelime": "tarihinde", "adet": 183, "z": 18.0}, {"donem": "1990'ler", "sira": 2, "kelime": "dair", "adet": 92, "z": 14.0}, {"donem": "1990'ler", "sira": 3, "kelime": "siyas", "adet": 65, "z": 12.9}, {"donem": "1990'ler", "sira": 4, "kelime": "sayısı", "adet": 123, "z": 12.9}, {"donem": "1990'ler", "sira": 5, "kelime": "ilişkin", "adet": 120, "z": 12.8}, {"donem": "1990'ler", "sira": 6, "kelime": "onaylanmasının", "adet": 56, "z": 12.5}, {"donem": "1990'ler", "sira": 7, "kelime": "soruşturma", "adet": 79, "z": 12.4}, {"donem": "1990'ler", "sira": 8, "kelime": "dışişleri", "adet": 68, "z": 12.4}, {"donem": "1990'ler", "sira": 9, "kelime": "parlamento", "adet": 98, "z": 11.8}, {"donem": "1990'ler", "sira": 10, "kelime": "avrupa", "adet": 95, "z": 11.6}, {"donem": "1990'ler", "sira": 11, "kelime": "trilyon", "adet": 56, "z": 11.5}, {"donem": "1990'ler", "sira": 12, "kelime": "raporu", "adet": 77, "z": 11.3}, {"donem": "2000'ler", "sira": 1, "kelime": "destek", "adet": 277, "z": 18.5}, {"donem": "2000'ler", "sira": 2, "kelime": "ilçe", "adet": 111, "z": 14.1}, {"donem": "2000'ler", "sira": 3, "kelime": "gündeme", "adet": 211, "z": 13.8}, {"donem": "2000'ler", "sira": 4, "kelime": "yasa", "adet": 149, "z": 12.9}, {"donem": "2000'ler", "sira": 5, "kelime": "çiftçi", "adet": 230, "z": 12.5}, {"donem": "2000'ler", "sira": 6, "kelime": "insanlar", "adet": 176, "z": 11.7}, {"donem": "2000'ler", "sira": 7, "kelime": "tarım", "adet": 202, "z": 11.1}, {"donem": "2000'ler", "sira": 8, "kelime": "yasalar", "adet": 87, "z": 10.8}, {"donem": "2000'ler", "sira": 9, "kelime": "üretim", "adet": 147, "z": 10.7}, {"donem": "2000'ler", "sira": 10, "kelime": "doğru", "adet": 175, "z": 10.4}, {"donem": "2000'ler", "sira": 11, "kelime": "fırsat", "adet": 71, "z": 9.4}, {"donem": "2000'ler", "sira": 12, "kelime": "ürünleri", "adet": 99, "z": 9.4}, {"donem": "2010'ler", "sira": 1, "kelime": "çocukların", "adet": 269, "z": 19.9}, {"donem": "2010'ler", "sira": 2, "kelime": "aydın", "adet": 475, "z": 19.9}, {"donem": "2010'ler", "sira": 3, "kelime": "hük", "adet": 159, "z": 16.1}, {"donem": "2010'ler", "sira": 4, "kelime": "tbmm", "adet": 164, "z": 15.7}, {"donem": "2010'ler", "sira": 5, "kelime": "jeotermal", "adet": 133, "z": 14.7}, {"donem": "2010'ler", "sira": 6, "kelime": "milliyetçi", "adet": 114, "z": 13.4}, {"donem": "2010'ler", "sira": 7, "kelime": "akp", "adet": 175, "z": 13.1}, {"donem": "2010'ler", "sira": 8, "kelime": "bakın", "adet": 126, "z": 12.0}, {"donem": "2010'ler", "sira": 9, "kelime": "chp", "adet": 131, "z": 11.5}, {"donem": "2010'ler", "sira": 10, "kelime": "çocuk", "adet": 75, "z": 10.9}, {"donem": "2010'ler", "sira": 11, "kelime": "sorunları", "adet": 142, "z": 10.8}, {"donem": "2010'ler", "sira": 12, "kelime": "psikolojik", "adet": 71, "z": 10.4}, {"donem": "2020–22", "sira": 1, "kelime": "aydın", "adet": 369, "z": 21.1}, {"donem": "2020–22", "sira": 2, "kelime": "iktidar", "adet": 251, "z": 16.1}, {"donem": "2020–22", "sira": 3, "kelime": "özgürlükler", "adet": 101, "z": 15.6}, {"donem": "2020–22", "sira": 4, "kelime": "deprem", "adet": 76, "z": 13.6}, {"donem": "2020–22", "sira": 5, "kelime": "akp", "adet": 135, "z": 13.6}, {"donem": "2020–22", "sira": 6, "kelime": "jes", "adet": 70, "z": 13.0}, {"donem": "2020–22", "sira": 7, "kelime": "chp", "adet": 104, "z": 12.4}, {"donem": "2020–22", "sira": 8, "kelime": "turizm", "adet": 146, "z": 12.1}, {"donem": "2020–22", "sira": 9, "kelime": "yargı", "adet": 78, "z": 11.9}, {"donem": "2020–22", "sira": 10, "kelime": "didim", "adet": 57, "z": 10.8}, {"donem": "2020–22", "sira": 11, "kelime": "teklifi", "adet": 200, "z": 10.3}, {"donem": "2020–22", "sira": 12, "kelime": "infaz", "adet": 43, "z": 10.1}, {"donem": "2023–26", "sira": 1, "kelime": "emekli", "adet": 326, "z": 16.5}, {"donem": "2023–26", "sira": 2, "kelime": "iktidar", "adet": 523, "z": 11.8}, {"donem": "2023–26", "sira": 3, "kelime": "belediye", "adet": 280, "z": 10.8}, {"donem": "2023–26", "sira": 4, "kelime": "lira", "adet": 275, "z": 10.2}, {"donem": "2023–26", "sira": 5, "kelime": "chp", "adet": 342, "z": 9.6}, {"donem": "2023–26", "sira": 6, "kelime": "memleketim", "adet": 116, "z": 9.1}, {"donem": "2023–26", "sira": 7, "kelime": "cumhuriyet", "adet": 425, "z": 8.9}, {"donem": "2023–26", "sira": 8, "kelime": "anayasa", "adet": 329, "z": 8.8}, {"donem": "2023–26", "sira": 9, "kelime": "vatandaş", "adet": 405, "z": 8.8}, {"donem": "2023–26", "sira": 10, "kelime": "asgari", "adet": 99, "z": 8.6}, {"donem": "2023–26", "sira": 11, "kelime": "nerede", "adet": 152, "z": 8.3}, {"donem": "2023–26", "sira": 12, "kelime": "yargı", "adet": 191, "z": 8.3}], "hipotez": [{"id": "H1", "hipotez": "Jeotermal, 2000 sonrasında 2000 öncesinden yüksektir", "fark": 8.94, "alt": 6.73, "ust": 11.43, "sonuc": "Desteklendi"}, {"id": "H2", "hipotez": "Menderes kirliliği, 2000 sonrasında 2000 öncesinden yüksektir", "fark": 1.11, "alt": 0.33, "ust": 2.04, "sonuc": "Desteklendi"}, {"id": "H2b", "hipotez": "Menderes kirliliği (Aydın anan bağlamlarda), 2000 sonrası daha yüksek", "fark": 1.48, "alt": 0.55, "ust": 2.59, "sonuc": "Desteklendi"}, {"id": "H3", "hipotez": "İncir, 1990 sonrasında öncesinden farklıdır (iki yönlü)", "fark": 4.23, "alt": 0.96, "ust": 7.11, "sonuc": "Desteklendi"}, {"id": "H4", "hipotez": "Turizm, 1990 sonrasında öncesinden yüksektir", "fark": 17.71, "alt": 11.63, "ust": 23.74, "sonuc": "Desteklendi"}], "alinti": [{"konu": "Deprem", "yil": 2020, "vekil": "Süleyman Bülbül", "metin": "Aydın ili, Türkiye’nin birinci derece deprem riski olan illerindendir, son olarak 22 Ocak 2020’de merkez üssü Efeler ilçesi Emirdoğan köyü olan 3,5 şiddetinde deprem yaşanmıştır."}, {"konu": "Deprem", "yil": 2020, "vekil": "Bekir Kuvvet Erim", "metin": "Sözlerime başlamadan önce 30 Ekimde yaşadığımız elim hadiseden dolayı, İzmir ilimiz başta olmak üzere Aydın ve çevre illerimizde depremden zarar gören tüm hemşehrilerimize geçmiş olsun dileklerimi iletiyor; vefat edenlere Allah’tan rahmet, yaralılarımıza ise acil şifalar diliyorum."}, {"konu": "Deprem", "yil": 2024, "vekil": "Ömer Karakaş", "metin": "Bu da çok sayıda can ve mal kaybına sebep olacaktır. 6 Şubat depreminde yaşanan acı kayıpları tekrar yaşamamak için Aydın'da olası deprem ihtimaline yönelik önlemlerin mutlaka alınması gerekmektedir."}, {"konu": "Jeotermal", "yil": 2009, "vekil": "Mehmet Erdem", "metin": "...Türkiye'de özellikle Aydın ili başta olmak üzere JEST dediğimiz jeotermal elektrik santralleri kurulmuştur."}, {"konu": "Jeotermal", "yil": 2016, "vekil": "Abdurrahman Öz", "metin": "Açıkladığım sebeplerle jeotermalle ilgili iddialara da katılmadığımı ifade etmek istiyorum. Meclis araştırması talebinin 3’üncü maddesinde ifade edilen, Aydın’da kanser vakalarının Türkiye ortalamasının üstünde olduğu iddiasını da kabul etmiyorum.", "baglam": "iktidar vekili olarak muhalefetin Meclis araştırması önergesine yanıt veriyor"}, {"konu": "Jeotermal", "yil": 2016, "vekil": "Abdurrahman Öz", "metin": "İzmir tarafından Aydın sınırlarına girdiğimizde, Germencik ilçemizden başlayarak İncirliova, Efeler, Köşk, Sultanhisar, Nazilli ve Buharkent ilçelerimizde 9 adet jeotermal santral bulunmaktadır ve bu jeotermal santrallerde aylık 3 milyar 194 milyon 520 bin 250 kilovatsaat enerji üretilmektedir."}, {"konu": "Jeotermal", "yil": 2019, "vekil": "Bekir Kuvvet Erim", "metin": "Bu amaçla tamamlanan 53 adet lisanslı jeotermal santralin 28 adedi Aydın’da bulunuyor. 5.969 gigavatsaatlik toplam elektrik üretiminin 4.535 gigavatlık kısmı Aydın’daki santrallerden elde edilmekte ve bu santrallerde yaklaşık bin kişiye istihdam sağlanmaktadır."}, {"konu": "Jeotermal", "yil": 2019, "vekil": "Bülent Tezcan", "metin": "Yani, siz kalkacaksınız, ruhsatlarla Aydın’ın yüzde 85’ini jeotermal alan ilan edeceksiniz Hükûmet olarak, bütün altyapıyı hazırlayacaksınız, bunla ilgili yasaklamalar, denetimleri yapmayacaksınız, ruhsat üzerinden bir şey bulmaya çalışacaksınız."}, {"konu": "Jeotermal", "yil": 2020, "vekil": "Hüseyin Yıldız", "metin": "Biz, bunu Aydın’da yaşıyoruz arkadaşlar; müzik biraz fazla çalıyor diye ufak bir bara gidip 35 bin lira ceza kesiyorsunuz, koskoca Aydın’ı zehirleyen jeotermallere gidip bin lira bile kesemiyorsunuz."}, {"konu": "Jeotermal", "yil": 2020, "vekil": "Süleyman Bülbül", "metin": "JES’ler tarafından Büyük Menderes havzasına yılda 90 milyon tondan fazla buhar ve 9 milyon tondan fazla yoğuşmayan gaz salımı olurken 80 milyon tondan fazla da akışkan, denetim olmadığından, Büyük Menderes Nehri’ne akıyor."}, {"konu": "Jeotermal", "yil": 2023, "vekil": "Ömer Karakaş", "metin": "…jeotermal enerjinin maalesef sadece elektrik santrallerinde kullanılması Aydınlılara hiçbir fayda sağlamıyor."}, {"konu": "Jeotermal", "yil": 2024, "vekil": "Süleyman Bülbül", "metin": "“Yenilenebilir enerji” adı altında inciri, zeytini, kestanesi, çileği, pamuğuyla birinci sınıf tarım arazilerinin yüzde 80'ine JES, RES ruhsatı verilen; havası, suyu, toprağı kirlenen; dağlarından yağ, ovalarından bal akan güzel Aydın’ımızda çevre ve doğa kıyımı sürüyor."}, {"konu": "Kuraklık", "yil": 2021, "vekil": "Aydın Adnan Sezgin", "metin": "Aydın ve Denizli’ye içme ve sulama suyu bağlayan Büyük Menderes Nehri son yıllarda yaşanan kuraklık ve iktidarın yanlış politikaları nedeniyle artık havzayı besleyemez duruma gelmiştir."}, {"konu": "Kuraklık", "yil": 2021, "vekil": "Süleyman Bülbül", "metin": "AKP iktidarının geleceği öngörmeyen, plansız ve olmayan su politikaları nedeniyle yaşanan kuraklık Aydın’da toprağı sulayacak yeterli suyu bulamayan çiftçilerden sonra şimdi de balıkları vurdu."}, {"konu": "Kuraklık", "yil": 2025, "vekil": "Süleyman Bülbül", "metin": "Aydın 1971-2015 arasında yüksek kuraklık yaşayan iller arasında, gelecek elli yılda da en çok etkilenecek iller arasında."}, {"konu": "Menderes kirliliği", "yil": 1998, "vekil": "Ali Rıza Gönül", "metin": "…kirlilik boyutunun en yüksek orana vardığı nehir Büyük Menderes Nehridir."}, {"konu": "Menderes kirliliği", "yil": 2005, "vekil": "Mehmet Boztaş", "metin": "Büyük Menderes Nehri ve Havzası aynı kirliliğin pençesinde can çekişmektedir."}, {"konu": "Menderes kirliliği", "yil": 2008, "vekil": "Ahmet Ertürk", "metin": "Çevre Bakanlığımız Uşak'taki deri sanayisinden kaynaklanan atıkların temizlenmesi için orada çok güzel bir çalışma yaptı ve o çalışma sonucunda, artık, Uşak'taki, Uşak ilimizdeki deri sanayicilerinin arıtma tesislerinden ötürü kirliliklerinin Büyük Menderes Nehri'ne, Banaz Çayı marifeti, daha az nispette geldiğini ve hatta hiç gelmediğini görüyoruz."}, {"konu": "Menderes kirliliği", "yil": 2017, "vekil": "Deniz Depboylu", "metin": "Menderes’in geçtiği dört ildeki belediyenin yüzde 88’inin arıtma tesisi yok, Aydın’daki belediyelerin ise yüzde 70 oranında arıtma tesisi olmadığını biliyoruz."}, {"konu": "Menderes kirliliği", "yil": 2017, "vekil": "Metin Lütfi Baydar", "metin": "Ülkemizdeki 25 akarsu havzasından biri olan Büyük Menderes’teki su kirliliği, havzada yaşayan 2,5 milyon insanı ve havza ekosistemini tehdit etmektedir."}, {"konu": "Menderes kirliliği", "yil": 2020, "vekil": "Süleyman Bülbül", "metin": "Büyük Menderes Nehri, Türkiye’nin en kirli 3’üncü nehri olma durumunda."}, {"konu": "Menderes kirliliği", "yil": 2021, "vekil": "Süleyman Bülbül", "metin": "Denetlenmeyen JES’lerin ve sanayi kuruluşlarının atıklarıyla Türkiye’nin en kirli nehri hâline gelen Büyük Menderes’te yaşayan balıklar ve birçok canlı türü şimdi de kuraklık nedeniyle can çekişiyor."}, {"konu": "Pamuk", "yil": 1951, "vekil": "Şevki Hasırcı", "metin": "…1949 senesinde Eğede pamuk sulama ücreti 150 kuruş iken 1950 senesinde 300 kuruşa çıkarılmış, fiyatlar bunun üzerinden tahsil edilmiştir."}, {"konu": "Pamuk", "yil": 1964, "vekil": "Hilmi Aydıncer", "metin": "Her geçen gün binlerce incir ağacı sökülmekte yerlerine, sulama imkânı olan yerlerde, pamuk ziraati yapılmakta, pamuğa tahvil edilen yerler ise % 5 i geçmemektedir."}, {"konu": "Pamuk", "yil": 1965, "vekil": "Mehmet Reşat Özarda", "metin": "Muhterem arkadaşlarım, Söke'nin bugün yalnız ovada pamuk ekimine müsait 440 bin dönüm toprağı vardır. .Bunun yüzde 40 ı halihazırda tamamen çoraklaşmış vaziyettedir."}, {"konu": "Pamuk", "yil": 1990, "vekil": "Hilmi Ziya Postacı", "metin": "Söke Tarım Satış Kooperatifi, 1990 ürünü 40 milyon kilogram pamuk almış, karşılığında 94 milyar lira ödeme yapması gerekiyor…"}, {"konu": "Pamuk", "yil": 1990, "vekil": "Hilmi Ziya Postacı", "metin": "Size bir örnek vereyim sayın milletvekilleri; Söke Tarım Satış Kooperatifi, 1990 ürünü 40 milyon kilogram pamuk almış, karşılığında 94 milyar lira ödeme yapması gerekiyor..."}, {"konu": "Pamuk", "yil": 1998, "vekil": "Muhammet Polat", "metin": "Aydın İlimizin bitkisel üretimi içerisinde endüstri bitkilerinin payı yüzde 31 civarındadır; pamuk üretimi yüzde 23,50'ye tekabületmektedir ki, bu en büyük değerdir."}, {"konu": "Pamuk", "yil": 2004, "vekil": "Ahmet Ertürk", "metin": "Yine, pamuğun yanında, bölgemizde insanlarımız pamuk üretiminden uzaklaşınca, örneğin, Manisa İlinde üzüm üretimine yöneliyorlar, Aydın İlinde de narenciye dikmeye yöneliyorlar."}, {"konu": "Pamuk", "yil": 2005, "vekil": "Mehmet Semerci", "metin": "Gerek tarımda yüksek girdiler gerekse pamuk fiyatlarının dünya borsalarındaki fiyat çizelgeleri, maalesef, bugün, pamuk çiftçisini, Ege Bölgesinde, Aydınımızda, Adanamızda, güneydoğumuzda iflas noktasına getirmiştir."}, {"konu": "Pamuk", "yil": 2018, "vekil": "Süleyman Bülbül", "metin": "Aydın’da pamuk üreticileri geçtiğimiz yıl dekardan 525 kilogram pamuk hasat ederken bu seneyse mevsimsel sıkıntılar nedeniyle 350-400 kilogram pamuk elde edebildi."}, {"konu": "Pamuk", "yil": 2022, "vekil": "Hüseyin Yıldız", "metin": "Geçen sene Söke, Aydın Ovası, Nazilli, Kuyucak, Koçarlı, İncirliova Ovalarında 20 ve 25 liraya pamuk satarken -yani 2 dolara satarken- üzülerek söylüyorum, bu sene 80 sent yani şu pamuk 15 lira."}, {"konu": "Pamuk", "yil": 2023, "vekil": "Evrim Karakoz", "metin": "Böyle devam ederse ne yazık ki pamukçularımız artık pamuk üretmekten vazgeçecekler. 1 kilo pamuk mazot olarak bilinir Aydın'da, geleneksel bir söz vardır."}, {"konu": "Zeytin", "yil": 1996, "vekil": "Fatih Atay", "metin": "Ayrıca, kirlenme, zeytinlikleri de mahvedecek ve zeytinyağı üretimi de duracaktır."}, {"konu": "Zeytin", "yil": 1998, "vekil": "Muhammet Polat", "metin": "Aydın'da, ağırlıklı tarım ürünü olarak pamuk başta olmak üzere, zeytin, incir, hububat, sebze ve narenciye de yetiştirilmektedir."}, {"konu": "Zeytin", "yil": 2017, "vekil": "Deniz Depboylu", "metin": "Zira, Aydın’da zeytin ağacı sayısı -resmî TBMM B: 42 19 . 12 . 2017 O: 5759 kurumlardan aldık bu bilgiyi- 22 milyon 201 bin 194, Türkiye geneline oranı yüzde 13."}, {"konu": "Zeytin", "yil": 2018, "vekil": "Abdurrahman Öz", "metin": "Bunun gerekçesinin de Aydın’da zeytinyağının, incirin, her türlü sebze ve meyvenin taze ve bol, beslenme alışkanlığının sebzeye dayalı olması olduğunu buradan ifade ediyorum."}, {"konu": "Zeytin", "yil": 2020, "vekil": "Hüseyin Yıldız", "metin": "Daha bir saat önce Ziraat Odası Başkanıyla görüştüm; bu sene Aydın’da zeytin verimliliği yüzde 20 düşmüş, incirde verimlilik yüzde 20 düştü değerli arkadaşlar."}, {"konu": "Zeytin", "yil": 2025, "vekil": "Ömer Karakaş", "metin": "Bu yasa teklifine Aydın’dan bakıldığında görünen şey şudur: Zeytini, inciri, toprağı, suyu yok etme yasasıdır."}, {"konu": "İncir", "yil": 1964, "vekil": "Hilmi Aydıncer", "metin": "Bu gidişle beş seneye kalmıyacak Aydın bölgesinde bir tek incir ağacı hulunmıyacaktır. ' Emeğinin karşılığını bulamıyan çiftçi pek haklı olarak, değil yeniden incir bahçeleri yapmak, mevcudu yok etmekten başka bir yol görememektedir."}, {"konu": "İncir", "yil": 1996, "vekil": "Cengiz Altınkaya", "metin": "Aydın’da, nüfusun yüzde 65’i tarımla iştigal eder; tarımsal gelirin de neredeyse yüzde 80-85’i pamuk ve incirden müteşekkildir…"}, {"konu": "İncir", "yil": 2004, "vekil": "Ahmet Ertürk", "metin": "Mesela, benim ilim Aydın'da, şu anda, 60 000 tona yakın bir incir üretimi söz konusudur; halbuki, ülke tüketimimiz 5 000 tondur, 55 000 ton ürünü ihraç etmek durumundayız ve bu 55 000 ton ürünü ihraç etme fırsatı için, gerek kooperatifler gerek tüccarlarımız, tacirlerimiz fırsat yaratma durumundayken, bir taraftan da, hâlâ, incir fidanları dikilmektedir."}, {"konu": "İncir", "yil": 2010, "vekil": "Ali Uzunırmak", "metin": "Dünya pazarlarının yüzde 60’ı Türkiye’nin elindedir ve Türkiye’nin de üretiminin yüzde 80’i Aydın’da yapılmaktadır ama incircimiz perişan hâldedir."}, {"konu": "İncir", "yil": 2016, "vekil": "Abdurrahman Öz", "metin": "Biliyorsunuz, geçen hafta Sayın Cumhurbaşkanımızın da teşrifleriyle Sanayi Bakanlığımız patent ödüllerini verdi ve “Aydın İnciri” markamıza 1’incilik ödülünü verdi."}, {"konu": "İncir", "yil": 2017, "vekil": "Deniz Depboylu", "metin": "Biz aynı projeyi incir ağaçları için de talep ediyoruz ki şöyle: Biliyorsunuz, dünyanın en iyi inciri Aydın’da üretiliyor. 2002’de incir ihracatı yapan sadece 6 firma vardı, bu rakam 2017’de 108 oldu."}, {"konu": "İncir", "yil": 2019, "vekil": "Bekir Kuvvet Erim", "metin": "Santrallerin yoğun olarak bulunduğu Germencik, Köşk ve İncirliova’da kuru incir üretimi 2007 yılında toplam 11.529 ton iken 2018 yılında 30.875 tona çıkmıştır."}], "vekil": [{"ad": "ALİ UZUNIRMAK", "konusma": 264, "kelime": 48679, "ilk_yil": 1999, "son_yil": 2015, "partiler": "MHP"}, {"ad": "İSMET SEZGİN", "konusma": 236, "kelime": 71727, "ilk_yil": 1954, "son_yil": 1997, "partiler": "AP/DYP"}, {"ad": "REŞAT ÖZARDA", "konusma": 231, "kelime": 106867, "ilk_yil": 1953, "son_yil": 1985, "partiler": "AP"}, {"ad": "SÜLEYMAN BÜLBÜL", "konusma": 228, "kelime": 56453, "ilk_yil": 2018, "son_yil": 2023, "partiler": "CHP"}, {"ad": "ALİ RIZA GÖNÜL", "konusma": 198, "kelime": 63636, "ilk_yil": 1992, "son_yil": 2002, "partiler": "DYP"}, {"ad": "Buyurunuz. NAHİT MENTEŞE", "konusma": 147, "kelime": 46764, "ilk_yil": 1966, "son_yil": 1997, "partiler": "AP/DYP"}, {"ad": "Buyurun. HÜSEYİN YILDIZ", "konusma": 146, "kelime": 37926, "ilk_yil": 2016, "son_yil": 2023, "partiler": "CHP"}, {"ad": "YÜKSEL YALOVA", "konusma": 131, "kelime": 68524, "ilk_yil": 1992, "son_yil": 2001, "partiler": "ANAP"}, {"ad": "RECEP TANER", "konusma": 118, "kelime": 15487, "ilk_yil": 1993, "son_yil": 2011, "partiler": "MHP"}, {"ad": "BÜLENT TEZCAN", "konusma": 107, "kelime": 34017, "ilk_yil": 2011, "son_yil": 2023, "partiler": "CHP"}, {"ad": "AYDIN ADNAN SEZGİN", "konusma": 104, "kelime": 67770, "ilk_yil": 2018, "son_yil": 2023, "partiler": "IYI"}, {"ad": "DENİZ DEPBOYLU", "konusma": 77, "kelime": 47074, "ilk_yil": 2015, "son_yil": 2018, "partiler": "MHP"}, {"ad": "ERTUĞRUL KUMCUOĞLU", "konusma": 62, "kelime": 26849, "ilk_yil": 1993, "son_yil": 2010, "partiler": "DSP/MHP"}, {"ad": "AHMET RIZA ACAR", "konusma": 54, "kelime": 12840, "ilk_yil": 2003, "son_yil": 2007, "partiler": "AKP"}, {"ad": "CENGİZ ALTINKAYA", "konusma": 50, "kelime": 19177, "ilk_yil": 1988, "son_yil": 2001, "partiler": "ANAP"}, {"ad": "HİLMİ ZİYA POSTACI", "konusma": 47, "kelime": 14183, "ilk_yil": 1988, "son_yil": 1991, "partiler": "SHP"}, {"ad": "CEVAT ÜLKÜ", "konusma": 45, "kelime": 11788, "ilk_yil": 1951, "son_yil": 1960, "partiler": "DP"}, {"ad": "M. KEMAL YILMAZ", "konusma": 43, "kelime": 15795, "ilk_yil": 1966, "son_yil": 1972, "partiler": "CHP"}, {"ad": "ÖMER OKAN ÇAĞLAR", "konusma": 42, "kelime": 17372, "ilk_yil": 1988, "son_yil": 1991, "partiler": "ANAP"}, {"ad": "SEMA PİŞKİNSÜT", "konusma": 38, "kelime": 18871, "ilk_yil": 1996, "son_yil": 2002, "partiler": "DSP"}, {"ad": "AHMET ERTÜRK", "konusma": 35, "kelime": 19755, "ilk_yil": 2003, "son_yil": 2010, "partiler": "AKP"}, {"ad": "ATİLLA KOÇ", "konusma": 35, "kelime": 10582, "ilk_yil": 2003, "son_yil": 2011, "partiler": "AKP"}, {"ad": "ORHAN APAYDIN", "konusma": 35, "kelime": 8182, "ilk_yil": 1962, "son_yil": 1983, "partiler": "AP"}, {"ad": "MUSTAFA ŞÜKRÜ KOÇ", "konusma": 35, "kelime": 13565, "ilk_yil": 1952, "son_yil": 1976, "partiler": "CHP"}, {"ad": "İSKENDER CENAP EGE", "konusma": 33, "kelime": 6955, "ilk_yil": 1980, "son_yil": 1987, "partiler": "MDP"}, {"ad": "M. FATİH ATAY", "konusma": 31, "kelime": 8316, "ilk_yil": 1996, "son_yil": 2011, "partiler": "CHP"}, {"ad": "MEHMET BOZTAŞ", "konusma": 31, "kelime": 10875, "ilk_yil": 2003, "son_yil": 2006, "partiler": "CHP"}, {"ad": "ERTUĞRUL GÖKGÜN", "konusma": 30, "kelime": 6357, "ilk_yil": 1961, "son_yil": 1986, "partiler": "MDP"}, {"ad": "MEHMET MESUT ÖZAKCAN", "konusma": 28, "kelime": 21563, "ilk_yil": 2003, "son_yil": 2007, "partiler": "CHP"}, {"ad": "BEKİR ONGUN", "konusma": 27, "kelime": 8703, "ilk_yil": 1999, "son_yil": 2002, "partiler": "MHP"}, {"ad": "BEKİR KUVVET ERİM", "konusma": 26, "kelime": 6728, "ilk_yil": 2018, "son_yil": 2023, "partiler": "AKP"}, {"ad": "MUHAMMET POLAT", "konusma": 21, "kelime": 6653, "ilk_yil": 1996, "son_yil": 1999, "partiler": "RP"}, {"ad": "ÖZLEM ÇERÇİOĞLU", "konusma": 18, "kelime": 9659, "ilk_yil": 2003, "son_yil": 2008, "partiler": "CHP"}, {"ad": "ABDURRAHMAN ÖZ", "konusma": 17, "kelime": 6908, "ilk_yil": 2016, "son_yil": 2018, "partiler": "AKP"}, {"ad": "TUNÇ BİLGET", "konusma": 16, "kelime": 9164, "ilk_yil": 1991, "son_yil": 1995, "partiler": "DYP"}, {"ad": "METİN LÜTFİ BAYDAR", "konusma": 16, "kelime": 10629, "ilk_yil": 2011, "son_yil": 2018, "partiler": "CHP"}, {"ad": "MEHMET ERDEM", "konusma": 16, "kelime": 2858, "ilk_yil": 2009, "son_yil": 2017, "partiler": "AKP"}, {"ad": "ŞEVKİ HASIRCI", "konusma": 15, "kelime": 4118, "ilk_yil": 1950, "son_yil": 1954, "partiler": "DP"}, {"ad": "MUSTAFA SAVAŞ", "konusma": 14, "kelime": 7789, "ilk_yil": 2018, "son_yil": 2023, "partiler": "AKP"}, {"ad": "METİN YAVUZ", "konusma": 14, "kelime": 4933, "ilk_yil": 2018, "son_yil": 2021, "partiler": "AKP"}, {"ad": "SEMİHA ÖYÜŞ", "konusma": 11, "kelime": 6800, "ilk_yil": 2003, "son_yil": 2015, "partiler": "AKP"}, {"ad": "NAMIK GEDİK", "konusma": 10, "kelime": 5399, "ilk_yil": 1950, "son_yil": 1953, "partiler": "DP"}, {"ad": "RIZA POSACI", "konusma": 10, "kelime": 2055, "ilk_yil": 2018, "son_yil": 2022, "partiler": "AKP"}, {"ad": "HİLMİ AYDINÇER", "konusma": 9, "kelime": 2414, "ilk_yil": 1962, "son_yil": 1965, "partiler": "AP"}, {"ad": "OSMAN AYDIN", "konusma": 9, "kelime": 4532, "ilk_yil": 2012, "son_yil": 2015, "partiler": "CHP"}, {"ad": "SELAMİ GÜRGÜÇ", "konusma": 8, "kelime": 912, "ilk_yil": 1978, "son_yil": 1980, "partiler": "CHP"}, {"ad": "MUHARREM SÖKELİ", "konusma": 7, "kelime": 439, "ilk_yil": 1980, "son_yil": 1980, "partiler": "CHP"}, {"ad": "MEHMET SEMERCİ", "konusma": 7, "kelime": 2304, "ilk_yil": 2004, "son_yil": 2006, "partiler": "CHP"}, {"ad": "HALİT DİKMEN", "konusma": 7, "kelime": 3220, "ilk_yil": 2000, "son_yil": 2002, "partiler": "DSP"}, {"ad": "MEHMET YAVAŞ", "konusma": 7, "kelime": 2847, "ilk_yil": 1961, "son_yil": 1962, "partiler": "AP"}, {"ad": "NİHAT İYRİBOZ", "konusma": 6, "kelime": 1518, "ilk_yil": 1956, "son_yil": 1960, "partiler": "DP"}, {"ad": "YÜKSEL MENDERES", "konusma": 6, "kelime": 569, "ilk_yil": 1971, "son_yil": 1972, "partiler": "AP"}, {"ad": "NECATİ CELİM", "konusma": 6, "kelime": 369, "ilk_yil": 1956, "son_yil": 1958, "partiler": "DP"}, {"ad": "İSA AYHAN", "konusma": 4, "kelime": 1069, "ilk_yil": 1976, "son_yil": 1977, "partiler": "CHP"}, {"ad": "KEMAL ZİYA ÖZTÜRK", "konusma": 4, "kelime": 771, "ilk_yil": 1975, "son_yil": 1976, "partiler": "AP"}, {"ad": "BEHİÇ TOZKOPARAN", "konusma": 4, "kelime": 248, "ilk_yil": 1979, "son_yil": 1980, "partiler": "AP"}, {"ad": "Ol. REFET ALPMAN", "konusma": 2, "kelime": 586, "ilk_yil": 1950, "son_yil": 1950, "partiler": "CHP"}, {"ad": "Dr. SABRI AKIN", "konusma": 2, "kelime": 713, "ilk_yil": 1950, "son_yil": 1950, "partiler": "CHP"}, {"ad": "NAİL GEVECİ", "konusma": 2, "kelime": 668, "ilk_yil": 1953, "son_yil": 1956, "partiler": "DP"}, {"ad": "NABİ SABUNCU", "konusma": 2, "kelime": 163, "ilk_yil": 1986, "son_yil": 1987, "partiler": "ANAP"}, {"ad": "NURİ GÖKTEPE", "konusma": 1, "kelime": 52, "ilk_yil": 1950, "son_yil": 1950, "partiler": "CHP"}, {"ad": "ALİ GÜLTEKİN KILINÇ", "konusma": 1, "kelime": 529, "ilk_yil": 2014, "son_yil": 2014, "partiler": "AKP"}, {"ad": "MEHMET ÇELİK", "konusma": 1, "kelime": 1263, "ilk_yil": 1972, "son_yil": 1972, "partiler": "CHP"}, {"ad": "HÜSAMETTİN COŞKUN", "konusma": 1, "kelime": 87, "ilk_yil": 1958, "son_yil": 1958, "partiler": "DP"}, {"ad": "FİKRET TURHANGİL", "konusma": 1, "kelime": 510, "ilk_yil": 1970, "son_yil": 1970, "partiler": "AP"}, {"ad": "Dr. MAZHAR GERMEN", "konusma": 1, "kelime": 304, "ilk_yil": 1950, "son_yil": 1950, "partiler": "CHP"}, {"ad": "MUSTAFA BOZKURT", "konusma": 1, "kelime": 496, "ilk_yil": 1989, "son_yil": 1989, "partiler": "ANAP"}, {"ad": "NEŞET AKKOR", "konusma": 1, "kelime": 54, "ilk_yil": 1950, "son_yil": 1950, "partiler": "CHP"}, {"ad": "ZÜHTÜ URAY", "konusma": 1, "kelime": 261, "ilk_yil": 1956, "son_yil": 1956, "partiler": "DP"}]};
+  const dark=matchMedia('(prefers-color-scheme: dark)');
+  const L=['#0072B2','#D55E00','#009E73','#CC79A7','#B8860B','#3DA5D9','#8C6D31','#6B7280'],K=['#56B4E9','#F28E4B','#2FC4A0','#E39BC4','#E6B54A','#7CC4EE','#C4A25C','#A3A9B4'];
+  const P={konu:'Jeotermal',donem:"2010'ler",donemA:"1990'ler",donemB:"2010'ler"};
+  const cbs=[];
+  const api={
+    data:(id)=>({status:D[id]?'ok':'missing',data:D[id]||[],columns:Object.keys((D[id]||[{}])[0]||{})}),
+    onData:(fn)=>{cbs.push(fn);fn();},
+    params:()=>P,
+    setParams:(o)=>{Object.assign(P,o);cbs.forEach((f)=>f());},
+    resetParams:()=>{},setLink:()=>{},
+    get colors(){return dark.matches?K:L;}
+  };
+  let t;addEventListener('resize',()=>{clearTimeout(t);t=setTimeout(()=>cbs.forEach((f)=>f()),150);});
+  dark.addEventListener('change',()=>cbs.forEach((f)=>f()));
+  return api;
+})();
+</script>
+<script>
+
+(() => {
+  const NS = 'http://www.w3.org/2000/svg';
+  const $ = (s) => document.querySelector(s);
+  const el = (n, a = {}, p) => { const e = document.createElementNS(NS, n); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+  const fmt = d3.format(',.1f');
+  const state = { alintiKonu: '', q: '', dFilt: false };
+  const range = (d) => { const m = /^(\d{4})'ler$/.exec(d); if (m) return [+m[1], +m[1] + 9]; const n = /^(\d{4})–(\d{2})$/.exec(d); return n ? [+n[1], 2000 + +n[2]] : null; };
+  const KONU_RENK = {};
+  const renk = (k) => { if (!(k in KONU_RENK)) KONU_RENK[k] = dash.colors[Object.keys(KONU_RENK).length % 8]; return KONU_RENK[k]; };
+
+  function failed(box) { box.replaceChildren(); const d = document.createElement('div'); d.className = 'bad'; const i = document.createElement('i'); d.append(i, 'Failed to load'); box.append(d); }
+  function chips(host, items, current, onPick) {
+    host.replaceChildren();
+    items.forEach((v) => {
+      const b = document.createElement('button'); b.className = 'chip'; b.type = 'button';
+      b.textContent = v || 'Tümü'; b.setAttribute('aria-pressed', String(v === current));
+      b.addEventListener('click', () => onPick(v)); host.append(b);
+    });
+  }
+  function tipFor(box) {
+    let t = box.querySelector('.tip');
+    if (!t) { t = document.createElement('div'); t.className = 'tip'; box.append(t); }
+    return {
+      show(html, x, y) {
+        t.replaceChildren(...html); t.style.display = 'block';
+        const w = box.clientWidth, tw = t.offsetWidth;
+        t.style.left = Math.max(0, Math.min(w - tw, x + 12)) + 'px'; t.style.top = Math.max(0, y - 10) + 'px';
+      },
+      hide() { t.style.display = 'none'; }
+    };
+  }
+  const line = (cls, txt) => { const d = document.createElement('div'); if (cls) d.className = cls; d.textContent = txt; return d; };
+
+  let gradN = 0;
+  function lineChart(box, xs, series, o = {}) {
+    const keep = box.querySelector('.tip'); box.replaceChildren(); if (keep) box.append(keep);
+    const W = Math.max(280, box.clientWidth), H = 290, m = { t: 14, r: 18, b: 30, l: 46 };
+    const svg = el('svg', { width: '100%', viewBox: `0 0 ${W} ${H}`, role: 'img' }); box.append(svg);
+    const all = series.flatMap((s) => s.pts.filter((p) => p.y != null));
+    const ymax = d3.max(all, (p) => p.hi ?? p.y) || 1;
+    const y = d3.scaleLinear([0, ymax * 1.05], [H - m.b, m.t]).nice();
+    const x = o.time ? d3.scaleLinear(d3.extent(xs), [m.l, W - m.r]) : d3.scalePoint(xs, [m.l + 16, W - m.r - 16]);
+    const px = (v) => x(v);
+    const defs = el('defs', {}, svg);
+    const g = el('g', {}, svg);
+    y.ticks(5).forEach((v) => {
+      el('line', { x1: m.l, x2: W - m.r, y1: y(v), y2: y(v), stroke: 'var(--cds-chart-grid)' }, g);
+      const tx = el('text', { x: m.l - 8, y: y(v) + 3, 'text-anchor': 'end', fill: 'var(--color-fg-muted)', 'font-size': 11 }, g); tx.textContent = fmt(v).replace('.0', '');
+    });
+    const xt = o.time ? x.ticks(Math.max(3, Math.floor(W / 80))).filter(Number.isInteger) : xs;
+    xt.forEach((v) => { const tx = el('text', { x: px(v), y: H - 9, 'text-anchor': 'middle', fill: 'var(--color-fg-muted)', 'font-size': 11 }, g); tx.textContent = (!o.time && W < 560) ? String(v).replace(/^\d\d(\d\d)'ler$/, "$1'ler").replace(/^\d\d(\d\d)–/, '$1–') : String(v); });
+    el('line', { x1: m.l, x2: W - m.r, y1: y(0), y2: y(0), stroke: 'var(--cds-chart-axis)' }, g);
+    (o.bands || []).forEach((b) => el('rect', { x: px(b.from), width: Math.max(3, px(b.to) - px(b.from)), y: m.t, height: H - m.b - m.t, fill: 'var(--cds-chart-muted)', opacity: .22 }, g));
+    series.forEach((s) => {
+      const col = s.color, ok_ = s.pts.filter((p) => p.y != null);
+      if (ok_.some((p) => p.lo != null)) {
+        const area = d3.area().x((p) => px(p.x)).y0((p) => y(p.lo)).y1((p) => y(p.hi)).defined((p) => p.y != null);
+        el('path', { d: area(s.pts), style: `fill:${col}`, opacity: .2 }, g);
+      } else if (o.fill) {
+        const id = 'ag' + (++gradN) + Math.random().toString(36).slice(2, 6);
+        const lg = el('linearGradient', { id, x1: 0, x2: 0, y1: 0, y2: 1 }, defs);
+        [[0, .26], [.25, .16], [.5, .08], [.75, .03], [1, 0]].forEach(([off, op]) => el('stop', { offset: off, style: `stop-color:${col};stop-opacity:${op}` }, lg));
+        const area = d3.area().x((p) => px(p.x)).y0(y(0)).y1((p) => y(p.y)).defined((p) => p.y != null);
+        el('path', { d: area(s.pts), fill: `url(#${id})` }, g);
+      }
+      const ln = d3.line().x((p) => px(p.x)).y((p) => y(p.y)).defined((p) => p.y != null);
+      el('path', { d: ln(s.pts), fill: 'none', style: `stroke:${col}`, 'stroke-width': 2.25, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, g);
+      if (o.dots) ok_.forEach((p) => el('circle', { cx: px(p.x), cy: y(p.y), r: 4.5, style: `fill:${col}`, stroke: 'var(--color-panel)', 'stroke-width': 2 }, g));
+    });
+    const tip = tipFor(box), rule = el('line', { y1: m.t, y2: H - m.b, stroke: 'var(--cds-chart-reference)', opacity: 0 }, g);
+    const pts = xs.map((v) => ({ v, x: px(v) }));
+    const ov = el('rect', { x: m.l, y: m.t, width: W - m.l - m.r, height: H - m.t - m.b, fill: 'transparent' }, svg);
+    ov.addEventListener('mousemove', (ev) => {
+      const r = svg.getBoundingClientRect(), mx = (ev.clientX - r.left) * W / r.width;
+      const n = d3.least(pts, (p) => Math.abs(p.x - mx)); rule.setAttribute('x1', n.x); rule.setAttribute('x2', n.x); rule.setAttribute('opacity', 1);
+      const rows = [line('h', String(n.v))];
+      series.forEach((s) => { const p = s.pts.find((q) => q.x === n.v); if (p && p.y != null) rows.push(line('', `${series.length > 1 ? s.name + ': ' : ''}${o.fmt ? o.fmt(p) : fmt(p.y)}`)); });
+      tip.show(rows, n.x * r.width / W, ev.clientY - r.top);
+    });
+    if (o.onPick) { ov.style.cursor = 'pointer'; ov.addEventListener('click', (ev) => { const r = svg.getBoundingClientRect(), mx = (ev.clientX - r.left) * W / r.width; o.onPick(d3.least(pts, (p) => Math.abs(p.x - mx)).v); }); }
+    ov.addEventListener('mouseleave', () => { tip.hide(); rule.setAttribute('opacity', 0); });
+  }
+  function legend(box, series) {
+    if (series.length < 2) return;
+    const d = document.createElement('div'); d.style.cssText = 'display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:8px;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)';
+    series.forEach((s) => { const i = document.createElement('span'); const sw = document.createElement('span'); sw.style.cssText = `display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;background:${s.color}`; i.append(sw, s.name); d.append(i); });
+    box.append(d);
+  }
+
+  function drawStats() {
+    const g = dash.data('hipotez'); if (g.status !== 'ok') return;
+    document.querySelector('.ap').style.setProperty('--accent', dash.colors[0]);
+    document.querySelectorAll('#stats .stat').forEach((s, i) => s.style.setProperty('--sc', dash.colors[i]));
+    document.querySelectorAll('#stats b').forEach((b) => { const r = g.data.find((q) => q.id === b.dataset.where.split('=')[1]); if (r) b.textContent = '+' + fmt(r.fark); });
+  }
+  function drawKonu() {
+    const box = $('#konu-chart'), g = dash.data('konu');
+    if (g.status !== 'ok') { if (g.status === 'error') failed(box); return; }
+    const rows = g.data, konular = [...new Set(rows.map((r) => r.konu))], xs = [...new Set(rows.map((r) => r.grup))];
+    konular.forEach(renk);
+    let k = dash.params().konu; if (!konular.includes(k)) k = konular[0];
+    chips($('#konu-chips'), konular, k, (v) => dash.setParams({ konu: v }));
+    const pts = xs.map((x) => { const r = rows.find((q) => q.konu === k && q.grup === x); return r ? { x, y: r.oran, lo: r.alt, hi: r.ust, kb: r.kelime_bin } : { x, y: null }; });
+    lineChart(box, xs, [{ name: k, color: renk(k), pts }], { dots: true, onPick: (v) => dash.setParams({ donem: v === '2020–26' ? '2023–26' : v }), fmt: (p) => `${fmt(p.y)} (aralık ${fmt(p.lo)}–${fmt(p.hi)}; ${d3.format(',')(p.kb)} bin kelime)` });
+  }
+  function drawAnma() {
+    const box = $('#anma-chart'), g = dash.data('anma');
+    if (g.status !== 'ok') { if (g.status === 'error') failed(box); return; }
+    const rows = g.data.map((r) => ({ x: +r.yil, y: r.oran == null ? null : +r.oran })), xs = rows.map((r) => r.x);
+    lineChart(box, xs, [{ name: 'Anılma', color: dash.colors[0], pts: rows }], { time: true, fill: true, bands: [{ from: 1981, to: 1983 }], fmt: (p) => `${fmt(p.y)} / 100 bin kelime` });
+  }
+  function drawTema() {
+    const box = $('#tema-chart'), g = dash.data('tema');
+    if (g.status !== 'ok') { if (g.status === 'error') failed(box); return; }
+    const rows = g.data, xs = [...new Set(rows.map((r) => r.grup))], temalar = [...new Set(rows.map((r) => r.tema))];
+    const series = temalar.map((t, i) => ({ name: t, color: dash.colors[i % 8], pts: xs.map((x) => { const r = rows.find((q) => q.tema === t && q.grup === x); return { x, y: r ? r.oran : null }; }) }));
+    lineChart(box, xs, series, { dots: true });
+    legend(box, series);
+  }
+  function drawAyirt() {
+    const host = $('#ayirt-list'), g = dash.data('ayirt');
+    if (g.status !== 'ok') { if (g.status === 'error') failed(host); return; }
+    host.classList.remove('dash-skeleton');
+    const rows = g.data, donemler = [...new Set(rows.map((r) => r.donem))];
+    let d = dash.params().donem; if (!donemler.includes(d)) d = donemler.at(-3) || donemler[0];
+    chips($('#ayirt-chips'), donemler, d, (v) => dash.setParams({ donem: v }));
+    const list = rows.filter((r) => r.donem === d).sort((a, b) => a.sira - b.sira), mx = d3.max(list, (r) => r.z) || 1;
+    host.replaceChildren();
+    list.forEach((r) => {
+      const w = document.createElement('div'); w.className = 'wr';
+      const a = document.createElement('span'); a.textContent = r.kelime;
+      const bw = document.createElement('div'); const b = document.createElement('div'); b.className = 'bar'; b.style.width = (100 * r.z / mx) + '%'; bw.append(b);
+      const z = document.createElement('span'); z.textContent = fmt(r.z); w.append(a, bw, z); w.title = `${r.kelime}: ${r.adet} kez`; host.append(w);
+    });
+  }
+  function drawHipotez() {
+    const g = dash.data('hipotez'), tb = $('#hipotez-tablo tbody');
+    if (g.status !== 'ok') return;
+    tb.replaceChildren();
+    g.data.forEach((r) => {
+      const tr = document.createElement('tr'); tr.dataset.key = r.id;
+      [r.id, r.hipotez, fmt(r.fark), fmt(r.alt), fmt(r.ust), r.sonuc].forEach((v, i) => { const td = document.createElement('td'); if (i >= 2 && i <= 4) td.className = 'n'; td.textContent = v; tr.append(td); });
+      tb.append(tr);
+    });
+  }
+  function drawAlinti() {
+    const g = dash.data('alinti'), host = $('#alinti-list');
+    if (g.status !== 'ok') return;
+    const konular = ['', ...new Set(g.data.map((r) => r.konu))];
+    chips($('#alinti-chips'), konular, state.alintiKonu, (v) => { state.alintiKonu = v; drawAlinti(); });
+    const q = state.q.trim().toLocaleLowerCase('tr');
+    const dn = dash.params().donem, rg = range(dn), db = $('#alinti-donem');
+    db.textContent = 'Seçili dönemle sınırla: ' + (dn || '–'); db.setAttribute('aria-pressed', String(state.dFilt));
+    host.replaceChildren();
+    let n = 0;
+    g.data.forEach((r, i) => {
+      if (state.alintiKonu && r.konu !== state.alintiKonu) return;
+      if (state.dFilt && rg && (r.yil < rg[0] || r.yil > rg[1])) return;
+      if (q && !`${r.vekil} ${r.yil} ${r.metin} ${r.konu}`.toLocaleLowerCase('tr').includes(q)) return;
+      n++;
+      const bq = document.createElement('blockquote'); bq.className = 'quote'; bq.style.setProperty('--qc', renk(r.konu));
+      const p = document.createElement('p'); p.setAttribute('data-source', 'alinti'); p.setAttribute('data-field', 'metin'); p.setAttribute('data-row', String(i)); p.textContent = r.metin;
+      const w = document.createElement('div'); w.className = 'who';
+      const pill = document.createElement('span'); pill.className = 'pill'; pill.textContent = r.konu;
+      const nm = document.createElement('span'); nm.textContent = `${r.vekil}, ${r.yil}`; w.append(pill, nm);
+      if (r.baglam) { const c = document.createElement('span'); c.className = 'ctx'; c.textContent = r.baglam; w.append(c); }
+      bq.append(p, w); host.append(bq);
+    });
+    if (!n) host.append(line('note', 'Bu süzgeçle eşleşen alıntı yok.'));
+  }
+  function drawCmp() {
+    const host = $('#cmp'), g = dash.data('konu');
+    if (g.status !== 'ok') { if (g.status === 'error') failed(host); return; }
+    const rows = g.data, gr = [...new Set(rows.map((r) => r.grup))], konular = [...new Set(rows.map((r) => r.konu))];
+    let a = dash.params().donemA, b = dash.params().donemB;
+    if (!gr.includes(a)) a = "1990'ler"; if (!gr.includes(b)) b = "2010'ler";
+    [['#selA', a], ['#selB', b]].forEach(([s, v]) => { const e = $(s); if (e !== document.activeElement) { e.replaceChildren(...gr.map((x) => new Option(x))); e.value = v; } });
+    const mx = d3.max(rows.filter((r) => r.grup === a || r.grup === b), (r) => r.oran) || 1;
+    host.replaceChildren();
+    const w = document.createElement('div'); w.className = 'cmp';
+    konular.forEach((k) => {
+      const lab = document.createElement('div'); lab.textContent = k;
+      const col = document.createElement('div');
+      [[a, 0], [b, 1]].forEach(([gg, i]) => {
+        const r = rows.find((q) => q.konu === k && q.grup === gg); const line_ = document.createElement('div'); line_.style.display = 'flex'; line_.style.alignItems = 'center';
+        const bar = document.createElement('div'); bar.className = 'b'; bar.style.width = (r ? 100 * r.oran / mx * 0.8 : 0) + '%'; bar.style.background = dash.colors[i];
+        const v = document.createElement('span'); v.className = 'v'; v.textContent = r ? gg + ': ' + fmt(r.oran) : gg + ': –';
+        line_.append(bar, v); col.append(line_);
+      });
+      w.append(lab, col);
+    });
+    host.append(w);
+  }
+  ['#selA', '#selB'].forEach((s, i) => $(s).addEventListener('change', (e) => dash.setParams(i ? { donemB: e.target.value } : { donemA: e.target.value })));
+  const vs = { key: 'kelime', dir: -1, q: '' };
+  document.querySelectorAll('#vek-tablo th').forEach((th) => th.addEventListener('click', () => { const k = th.dataset.field; vs.dir = vs.key === k ? -vs.dir : (k === 'ad' || k === 'partiler' ? 1 : -1); vs.key = k; drawVek(); }));
+  $('#vek-ara').addEventListener('input', (e) => { vs.q = e.target.value; drawVek(); });
+  function drawVek() {
+    const g = dash.data('vekil'), tb = $('#vek-tablo tbody'); if (g.status !== 'ok') return;
+    const q = vs.q.trim().toLocaleLowerCase('tr');
+    const rows = g.data.filter((r) => !q || `${r.ad} ${r.partiler}`.toLocaleLowerCase('tr').includes(q)).sort((x, y) => (typeof x[vs.key] === 'number' ? x[vs.key] - y[vs.key] : String(x[vs.key]).localeCompare(String(y[vs.key]), 'tr')) * vs.dir);
+    document.querySelectorAll('#vek-tablo th').forEach((th) => th.setAttribute('aria-sort', th.dataset.field === vs.key ? (vs.dir > 0 ? 'ascending' : 'descending') : 'none'));
+    tb.replaceChildren();
+    rows.forEach((r) => { const tr = document.createElement('tr'); tr.dataset.key = r.ad; [r.ad, d3.format(',')(r.konusma), d3.format(',')(r.kelime), r.ilk_yil, r.son_yil, r.partiler].forEach((v, i) => { const td = document.createElement('td'); if (i >= 1 && i <= 4) td.className = 'n'; td.textContent = v; tr.append(td); }); tb.append(tr); });
+  }
+  $('#alinti-donem').addEventListener('click', () => { state.dFilt = !state.dFilt; drawAlinti(); });
+  $('#alinti-ara').addEventListener('input', (e) => { state.q = e.target.value; drawAlinti(); });
+
+  dash.onData(() => {
+    drawStats(); drawKonu(); drawAnma(); drawTema(); drawAyirt(); drawHipotez(); drawCmp();
+    if (document.activeElement.id !== 'vek-ara') drawVek();
+    if (document.activeElement.id !== 'alinti-ara') drawAlinti();
+  });
+})();
+</script>
+</body>
+</html>
